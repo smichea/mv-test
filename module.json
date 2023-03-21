@@ -1,0 +1,10 @@
+{
+  "code" : "test",
+  "description" : "test",
+  "license" : "GPL",
+  "currentVersion" : "0.1",
+  "isInDraft" : true,
+  "autoCommit" : true,
+  "moduleDependencies" : [ ],
+  "moduleFiles" : [ ]
+}
