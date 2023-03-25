@@ -1,0 +1,12 @@
+{
+  "code" : "TestCET",
+  "name" : "test",
+  "description" : "test",
+  "customEntityCategoryCode" : "test",
+  "availableStorages" : [ "SQL" ],
+  "sqlStorageConfiguration" : {
+    "storeAsTable" : true
+  },
+  "samples" : [ ],
+  "audited" : false
+}
