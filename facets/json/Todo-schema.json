@@ -4,5 +4,16 @@
     "$schema": "http://json-schema.org/draft-07/schema",
     "id": "Todo",
     "title": "todo",
-    "type": "object"
+    "type": "object",
+    "properties": {"name": {
+        "storages": ["SQL"],
+        "nullable": true,
+        "description": "name",
+        "readOnly": false,
+        "versionable": false,
+        "id": "CE_Todo_name",
+        "title": "Todo.name",
+        "type": "string",
+        "maxLength": 512
+    }}
 }
