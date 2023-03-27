@@ -1,0 +1,28 @@
+{
+  "code" : "test-multi",
+  "secured" : true,
+  "checkPathParams" : true,
+  "serviceCode" : "org.meveo.script.MultivalueInputs",
+  "synchronous" : true,
+  "method" : "POST",
+  "parameterMappings" : [ {
+    "serviceParameter" : "single",
+    "multivalued" : false,
+    "parameterName" : "single",
+    "valueRequired" : false
+  }, {
+    "serviceParameter" : "multi",
+    "multivalued" : true,
+    "parameterName" : "multi",
+    "valueRequired" : false
+  } ],
+  "pathParameters" : [ ],
+  "roles" : [ ],
+  "serializeResult" : false,
+  "contentType" : "application/json",
+  "basePath" : "test-multi",
+  "path" : "/",
+  "pool" : {
+    "usePool" : false
+  }
+}
