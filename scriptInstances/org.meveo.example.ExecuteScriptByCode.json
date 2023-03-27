@@ -1,0 +1,13 @@
+{
+  "code" : "org.meveo.example.ExecuteScriptByCode",
+  "description" : "Execute a script knowing its code",
+  "inputs" : [ ],
+  "outputs" : [ ],
+  "generateOutputs" : false,
+  "type" : "JAVA",
+  "transactionType" : "SAME",
+  "executionRoles" : [ ],
+  "sourcingRoles" : [ ],
+  "mavenDependencies" : [ ],
+  "importScriptInstances" : [ ]
+}
