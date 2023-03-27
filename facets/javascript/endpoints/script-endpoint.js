@@ -1,37 +1,62 @@
-const script-endpoint = async (parameters) =>  {
-	const baseUrl = window.location.origin;
-	const url = new URL(`${window.location.pathname.split('/')[1]}/rest/script-endpoint/`, baseUrl);
-	if (parameters.city !== undefined) {
-		url.searchParams.append('city', parameters.city);
+import EndpointInterface from "#{API_BASE_URL}/api/rest/endpoint/EndpointInterface.js";
+
+// the request schema, this should be updated
+// whenever changes to the endpoint parameters are made
+// this is important because this is used to validate and parse the request parameters
+const requestSchema = {
+  "title" : "script-endpointRequest",
+  "id" : "script-endpointRequest",
+  "default" : "Schema definition for script-endpoint",
+  "$schema" : "http://json-schema.org/draft-07/schema",
+  "type" : "object",
+  "properties" : {
+    "CityValue" : {
+      "title" : "CityValue",
+      "id" : "script-endpoint_CityValue",
+      "default" : "Paris",
+      "type" : "string",
+      "minLength" : 1
+    }
+  }
+}
+
+// the response schema, this should be updated
+// whenever changes to the endpoint parameters are made
+// this is important because this could be used to parse the result
+const responseSchema = {
+  "title" : "script-endpointResponse",
+  "id" : "script-endpointResponse",
+  "default" : "Schema definition for script-endpoint",
+  "$schema" : "http://json-schema.org/draft-07/schema",
+  "type" : "object",
+  "properties" : {
+    "results" : {
+      "title" : "results",
+      "type" : "string",
+      "minLength" : 1
+    }
+  }
+}
+
+// should contain offline mock data, make sure it adheres to the response schema
+const mockResult = {};
+
+class script-endpoint extends EndpointInterface {
+	constructor() {
+		// name and http method, these are inserted when code is generated
+		super("script-endpoint", "GET");
+		this.requestSchema = requestSchema;
+		this.responseSchema = responseSchema;
+		this.mockResult = mockResult;
 	}
 
-	return fetch(url.toString(), {
-		method: 'GET'
-	});
+	getRequestSchema() {
+		return this.requestSchema;
+	}
+
+	getResponseSchema() {
+		return this.responseSchema;
+	}
 }
 
-const script-endpointForm = (container) => {
-	const html = `<form id='script-endpoint-form'>
-		<div id='script-endpoint-CityValue-form-field'>
-			<label for='CityValue'>CityValue</label>
-			<input type='text' id='script-endpoint-CityValue-param' name='CityValue'/>
-		</div>
-		<button type='button'>Test</button>
-	</form>`;
-
-	container.insertAdjacentHTML('beforeend', html)
-
-	const CityValue = container.querySelector('#script-endpoint-CityValue-param');
-
-	container.querySelector('#script-endpoint-form button').onclick = () => {
-		const params = {
-			CityValue : CityValue.value !== "" ? CityValue.value : undefined
-		};
-
-		script-endpoint(params).then(r => r.text().then(
-				t => alert(t)
-			));
-	};
-}
-
-export { script-endpoint, script-endpointForm };
+export default new script-endpoint();
