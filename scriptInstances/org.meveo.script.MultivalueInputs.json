@@ -1,0 +1,18 @@
+{
+  "code" : "org.meveo.script.MultivalueInputs",
+  "inputs" : [ {
+    "name" : "multi",
+    "type" : "Set<String>"
+  }, {
+    "name" : "single",
+    "type" : "String"
+  } ],
+  "outputs" : [ ],
+  "generateOutputs" : false,
+  "type" : "JAVA",
+  "transactionType" : "SAME",
+  "executionRoles" : [ ],
+  "sourcingRoles" : [ ],
+  "mavenDependencies" : [ ],
+  "importScriptInstances" : [ ]
+}
