@@ -1,0 +1,25 @@
+{
+  "code" : "script-endpoint",
+  "secured" : true,
+  "checkPathParams" : true,
+  "serviceCode" : "org.meveo.test.script.ExposedScriptTest",
+  "synchronous" : true,
+  "method" : "GET",
+  "parameterMappings" : [ {
+    "serviceParameter" : "city",
+    "multivalued" : false,
+    "parameterName" : "CityValue",
+    "defaultValue" : "Paris",
+    "valueRequired" : false
+  } ],
+  "pathParameters" : [ ],
+  "roles" : [ ],
+  "returnedVariableName" : "results",
+  "serializeResult" : true,
+  "contentType" : "application/json",
+  "basePath" : "script-endpoint",
+  "path" : "/",
+  "pool" : {
+    "usePool" : false
+  }
+}
