@@ -1,0 +1,18 @@
+{
+  "code" : "org.meveo.test.script.ExposedScriptTest",
+  "inputs" : [ {
+    "name" : "city",
+    "type" : "String"
+  } ],
+  "outputs" : [ {
+    "name" : "results",
+    "type" : "Map<String,Object>"
+  } ],
+  "generateOutputs" : false,
+  "type" : "JAVA",
+  "transactionType" : "SAME",
+  "executionRoles" : [ ],
+  "sourcingRoles" : [ ],
+  "mavenDependencies" : [ ],
+  "importScriptInstances" : [ ]
+}
