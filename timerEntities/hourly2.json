@@ -1,0 +1,12 @@
+{
+  "code" : "hourly2",
+  "description" : "hourly",
+  "hour" : "*",
+  "minute" : "0",
+  "second" : "0",
+  "year" : "*",
+  "month" : "*",
+  "dayOfMonth" : "*",
+  "dayOfWeek" : "*",
+  "timezone" : "GMT"
+}
